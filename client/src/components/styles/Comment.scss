@@ -1,0 +1,136 @@
+@import '../../App';
+
+div.Comment {
+    background-color: $white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+    div.content {
+        display: flex;
+    }
+    div.votes {
+        height: 125px;
+        margin-right: 20px;
+        background-color: $very-light-gray;
+        padding: 8px 12px 10px;
+        height: max-content;
+        border-radius: 10px;
+        span {
+            display: block;
+            &.num {
+                color: $moderate-blue;
+                text-align: center;
+                margin: 8px auto;
+                font-weight: 500;
+                font-size: 17px;
+            }
+            &.vote {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                place-items: center;
+                display: grid;
+            }
+            &:hover svg {
+                color: $dark-blue;
+            }
+        }
+    }
+    section.comment-details {
+        width: 100%;
+        div.top {
+            display: flex;
+            justify-content: space-between;
+        }
+        div.btns {
+            display: flex;
+            div.delete {
+                color: $soft-red;
+                margin-right: 5px;
+            }
+            div.edit,
+            div.reply {
+                color: $moderate-blue;
+            }
+            > div {
+                cursor: pointer;
+                padding: 5px;
+                display: flex;
+                font-weight: 700;
+                gap: 5px;
+                transition: 0.2s;
+                &:hover {
+                    opacity: 0.65;
+                }
+            }
+        }
+        div.name-date {
+            display: flex;
+            align-items: center;
+            span.date {
+                margin-left: 15px;
+                color: $grayish-blue;
+            }
+            span.name {
+                color: $dark-blue;
+                font-weight: bold;
+            }
+        }
+    }
+    div.text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        p {
+            color: $grayish-blue;
+            line-height: 1.5;
+        }
+        span.replyName {
+            color: $moderate-blue;
+            font-weight: 700;
+        }
+        textarea {
+            padding: 10px 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            align-self: flex-end;
+            background-color: $moderate-blue;
+            font-size: 16px;
+            border: 0;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            &:hover {
+                opacity: 0.65;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    div.Comment {
+        section.comment-details {
+            div.top {
+                flex-direction: column;
+            }
+            div.btns {
+                margin: 14px 0 5px;
+                > div {
+                    font-size: 14px;
+                }
+            }
+        }
+        div.text button {
+            font-size: 14px;
+            padding: 10px 18px;
+        }
+    }
+}

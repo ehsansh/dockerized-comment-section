@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+$moderate-blue: hsl(238, 40%, 52%);
+$dark-blue: hsl(212, 24%, 26%);
+$grayish-blue: hsl(211, 10%, 45%);
+$light-grayish-blue: hsl(239, 57%, 85%);
+
+$soft-red: hsl(358, 79%, 66%);
+$pale-red: hsl(357, 100%, 86%);
+
+$light-gray: hsl(223, 19%, 93%);
+$very-light-gray: hsl(228, 33%, 97%);
+$white: hsl(0, 0%, 100%);
+
+body {
+    font-family: 'Rubik';
+    font-size: 16px;
+    background-color: $very-light-gray;
+    margin: 0;
+    position: relative;
+}
+
+div.auth-form {
+    width: 377px;
+    margin: 100px auto;
+    padding: 43px 0 54px;
+    border-radius: 50px;
+    border: 1px solid $light-gray;
+    background-color: $white;
+    p {
+        color: $dark-blue;
+        text-align: center;
+        margin-top: 50px;
+        a {
+            text-decoration: none;
+            color: $moderate-blue;
+        }
+    }
+    div.errors {
+        color: $soft-red;
+    }
+    h1 {
+        font-size: 22px;
+        margin: 0 auto 34px;
+        color: $dark-blue;
+        text-align: center;
+    }
+    div.row {
+        position: relative;
+        text-align: center;
+        div.error {
+            color: $soft-red;
+            font-size: 14px;
+        }
+        div.errors {
+            margin-top: 19px;
+        }
+    }
+    input {
+        width: 240px;
+        height: 40px;
+        border-radius: 67px;
+        display: block;
+        margin: 18px auto 4px;
+        border: 2px solid $light-gray;
+        padding-left: 20px;
+        font-family: 'Rubik';
+        color: $dark-blue;
+        &:focus {
+            outline: 1px solid $dark-blue;
+        }
+    }
+    button {
+        width: 240px;
+        height: 43px;
+        display: block;
+        background: $moderate-blue;
+        color: $white;
+        border-radius: 77px;
+        margin: 17px auto 0;
+        border: none;
+        transition: 0.2s;
+        span {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}
+@media (max-width: 400px) {
+    div.auth-form {
+        width: 95%;
+    }
+}

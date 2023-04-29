@@ -1,0 +1,24 @@
+# Exclude node_modules directories
+**/node_modules
+
+# Exclude build directories
+**/build
+**/dist
+
+# Exclude log files
+**/*.log
+
+# Exclude files and directories specific to the client directory
+client/node_modules
+client/.env
+client/.env.local
+client/.env.development.local
+client/.env.production.local
+
+# Exclude files and directories specific to the server directory
+server/node_modules
+server/.env
+server/.env.local
+server/.env.development.local
+server/.env.production.local
+server/config/.env
